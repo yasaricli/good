@@ -27,7 +27,7 @@ input, textarea, button { outline:none; border:0px; }
 .user div { float:left; }
 .user .avatar { width:40px; height:40px; }
 .user .avatar img { width:100%; border-radius:50px; }
-.user .username { margin:10px; }
+.user .username { margin-left:10px; line-height:40px; }
 
 #Photos { }
 #Photos li {}

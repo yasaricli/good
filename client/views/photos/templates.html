@@ -2,12 +2,12 @@
     <ul id="Photos">
         {{# each currentUser.photos }}
             <li>
-                <a href="#" class="user clearfix">
+                <div class="user clearfix">
                     <div class="avatar">
                         <img src="http://www.gravatar.com/avatar/f7e086bc0f602eb334f82d68dd21c0cf?default=404&size=200">
                     </div>
-                    <div class="username">yasaricli</div>
-                </a>
+                    <a href="{{ pathFor route='Profile' username=user.username }}" class="username">{{ user.username }}</a>
+                </div>
                 <div class="time">
                     <i class="fa fa-clock-o"></i> {{ livestamp uploadedAt }}
                 </div>
