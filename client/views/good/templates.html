@@ -1,0 +1,51 @@
+<head>
+    <title>good</title>
+</head>
+
+<template name="layout">
+    {{ > header }}
+    <div id="Surface">
+        {{ > yield }}
+    </div>
+    {{ > footer }}
+</template>
+
+<template name="authLayout">
+    <div id="Auth">
+        {{ > lightbox }}
+        {{ > yield }}
+    </div>
+</template>
+
+<template name="header">
+    <div id="Header"></div>
+</template>
+
+<template name="footer">
+    <ul id="Footer">
+        <li><a href="{{ pathFor route='Photos' }}" class="{{ isActiveRoute 'photos' }}"><i class="fa fa-home"></i></a></li>
+        <li><a href="#camera" class="photo"><i class="fa fa-camera"></i></a></li>
+        <li class="w34"><a href="{{ pathFor route='Profile' username=currentUser.username }}" class="{{ isActiveRoute 'profile' }}"><i class="fa fa-user"></i></a></li>
+    </ul>
+</template>
+
+<template name="home">
+    {{ > login }}
+</template>
+
+<template name="lightbox">
+    {{# if data }}
+        <div id="Lightbox">
+            <div class="content {{ data.type }}">
+                {{ data.message }}
+            </div>
+            <a class="close">Close</a>
+        </div>
+    {{/if}}
+</template>
+
+<template name="loading">
+    <div class="loading">
+        <img src="/loading.svg">
+    </div>
+</template>

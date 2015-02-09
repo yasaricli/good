@@ -1,0 +1,58 @@
+* { padding:0px; margin:0px; }
+
+body { padding:0px; margin:0px; font-family:'proxima-nova','Helvetica Neue',Arial,Helvetica,sans-serif; line-height: 20px; color: #222222; }
+
+ul, li { list-style:none; }
+a { color:#3f729b; text-shadow: 0 1px 0 rgba(255,255,255,.8); font-weight: 700; text-decoration:none; }
+a:hover { text-decoration:underline; }
+
+input, textarea, button { outline:none; border:0px; }
+
+.clearfix { display: inline-block; }
+.clearfix:after { content: "."; display: block; clear: both; visibility: hidden; line-height: 0; height: 0; }
+
+.w34 { width:34%!important; }
+
+#Header, #Footer { width:100%; position:fixed; }
+#Header { height:50px; background-color:#2b5b7f; top:0px; }
+#Footer { height:60px; background-color:#24292c; bottom:0px; }
+#Surface { margin:55px 0 60px 0; }
+
+#Footer li { float:left; width:33%; }
+#Footer li a { text-align:center; color:#a4a9ac; display:block; font-size:27px; padding:21px; border-bottom:5px solid #24292c; padding-bottom: 7px; }
+#Footer li a.active, #Footer li a:hover { background-color:#060807; border-color:#285c83; color:white; }
+#Footer li a.photo { color:white; background-color:#2b5b7f; border-color:#2b5b7f; }
+
+.user { display:block; padding:10px; height:40px; float:left; }
+.user div { float:left; }
+.user .avatar { width:40px; height:40px; }
+.user .avatar img { width:100%; border-radius:50px; }
+.user .username { margin:10px; }
+
+#Photos { }
+#Photos li {}
+#Photos li.empty { color:#a4a9ac; text-align:center; padding:20px; }
+#Photos li.empty .fa-meh-o { font-size:100px; }
+#Photos li .time { float:right; color:#a4a5a7; margin:21px; font-size:13px; }
+#Photos li .photo { width:100%; }
+
+.formline { position:relative; }
+.formline input { margin-bottom:10px; }
+.formline span { font-size:14px; text-align:center; display:block; padding:10px; }
+
+#Auth { padding:20px; }
+
+#LoginForm { }
+#LoginForm input { width:100%; border-bottom:1px solid #ccc; }
+#LoginForm input { line-height:40px; font-size:18px; color:#2b5b7f; }
+#LoginForm button { width:100%; background-color:#2b5b7f; color:white; font-size:18px; cursor:pointer; padding:10px; }
+#LoginForm button:hover { background-color:#1D4867; }
+
+#Lightbox { position: fixed; top: 0px; height: 100%; width: 100%; left: 0px; background-color: rgba(0, 0, 0, 0.77); z-index: 10; }
+#Lightbox .content { width: 80%; margin: auto; padding: 10px; text-align: center; margin-top: 10%; background-color:white; color:#717171; -webkit-border-top-left-radius: 2px; -webkit-border-top-right-radius: 2px; -moz-border-radius-topleft: 2px; -moz-border-radius-topright: 2px; border-top-left-radius: 2px; border-top-right-radius: 2px; font-size:13px; }
+#Lightbox .close { width: 80%; margin: auto; background-color:rgba(255, 255, 255, 0.92); text-align:center; border-top:1px solid #ccc; padding:10px; font-weight:bold; -webkit-border-bottom-right-radius: 2px; -webkit-border-bottom-left-radius: 2px; -moz-border-radius-bottomright: 2px; -moz-border-radius-bottomleft: 2px; border-bottom-right-radius: 2px; border-bottom-left-radius: 2px; color:#717171; display:block; cursor:pointer; text-decoration:none; }
+
+#Lightbox .close:hover { background-color:rgba(255, 255, 255, 0.96); }
+#Lightbox .warning { }
+#Lightbox .success {}
+.loading { text-align:center; padding:50px; }

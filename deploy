@@ -1,0 +1,4 @@
+#!/bin/bash
+
+meteor deploy good.meteor.com
+meteor run android-device --mobile-server good.meteor.com --verbose
