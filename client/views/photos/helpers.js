@@ -1,6 +1,1 @@
-Template.photos.helpers({
-    photos: function() {
-        return Photos.find({});
-    }
-});
-
+Template.photos.helpers({});
