@@ -1,5 +1,1 @@
-Template.lightbox.helpers({
-    data: function() {
-        return Lightbox.get();
-    }
-});
+Template.profile.helpers({});

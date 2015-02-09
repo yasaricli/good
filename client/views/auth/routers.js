@@ -12,5 +12,16 @@ Router.route('/register', {
 
 Router.route('/profile/:username', {
     name: 'Profile',
-    template: 'profile'
+    template: 'profile',
+    waitOn: function() {
+        return Meteor.subscribe('user', this.params.username);
+    },
+    data: function() {
+        var params = this.params;
+        return {
+            profile: function() {
+                return Users.findOne({ username: params.username });
+            }
+        }
+    }
 });

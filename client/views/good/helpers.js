@@ -13,9 +13,8 @@ _.each(TemplateHelpers, function(fn, name) {
     Template.registerHelper(name, fn);
 });
 
-Template.photos.helpers({
-    photos: function() {
-        return Photos.find({});
+Template.lightbox.helpers({
+    data: function() {
+        return Lightbox.get();
     }
 });
-
