@@ -61,6 +61,6 @@ input, textarea, button { outline:none; border:0px; }
 #Profile .profile-user .avatar { float:left; cursor:pointer; width:100px; height:100px; }
 #Profile .profile-user .bio { color: #333; font-weight: bold; font-size: 20px; display:block; margin:15px 0 0 115px; position:absolute; }
 #Profile .profile-user .bio p { font-size: 13px; line-height: 17px; font-weight: normal; margin-top: 10px; color:#666; padding-right:10px; }
-#Profile .profile-user .avatar img { border-radius:50%; width:100%; }
+#Profile .profile-user .avatar img { width:100%; border-radius:50%; }
 
 .loading { text-align:center; padding:50px; }

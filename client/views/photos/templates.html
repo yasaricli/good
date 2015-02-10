@@ -1,18 +1,20 @@
 <template name="photos">
     <ul id="Photos">
         {{# each photos }}
-            <li>
-                <div class="user clearfix">
-                    <div class="avatar">
-                        <img src="{{ user.avatar }}">
+            {{# if this.isUploaded }}
+                <li>
+                    <div class="user clearfix">
+                        <div class="avatar">
+                            <img src="{{ user.avatar }}">
+                        </div>
+                        <a href="{{ pathFor route='Profile' username=user.username }}" class="username">{{ user.username }}</a>
                     </div>
-                    <a href="{{ pathFor route='Profile' username=user.username }}" class="username">{{ user.username }}</a>
-                </div>
-                <div class="time">
-                    <i class="fa fa-clock-o"></i> {{ livestamp uploadedAt }}
-                </div>
-                <img src="{{ url }}" class="photo" data-filter="Nashville">
-            </li>
+                    <div class="time">
+                        <i class="fa fa-clock-o"></i> {{ livestamp uploadedAt }}
+                    </div>
+                    <img src="{{ url }}" class="photo" data-filter="Nashville">
+                </li>
+            {{/if}}
         {{ else }}
             <li class="empty">
                 <div>
