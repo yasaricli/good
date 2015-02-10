@@ -3,7 +3,11 @@ Avatars = new FS.Collection("avatars", {
         new FS.Store.GridFS("avatars", {
             transformWrite: function(fileObj, readStream, writeStream) {
                 // Transform the image into a 100x100px thumbnail
-                gm(readStream, fileObj.name()).resize('100', '100', '!').autoOrient().stream().pipe(writeStream);
+                gm(readStream, fileObj.name())
+                    .resize('100^', '100^')
+                    .gravity('Center')
+                    .crop(100, 100)
+                    .stream().pipe(writeStream);
             }
         })
     ],
