@@ -25,7 +25,7 @@ Meteor.publishComposite('user', function(username) {
 Meteor.publishComposite('photos', function(fileerId) {
     return {
         find: function() {
-            return Photos.find({ userId: this.userId });
+            return Photos.find({ });
         },
         children: [
 
