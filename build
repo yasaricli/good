@@ -1,0 +1,6 @@
+#!/bin/bash
+
+export DISABLE_WEBSOCKETS=true
+export ROOT_URL="http://good.yasaricli.com"
+
+meteor run android-device --mobile-server good.yasaricli.com --verbose
