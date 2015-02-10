@@ -13,6 +13,7 @@ Router.route('/register', {
 Router.route('/profile/:username', {
     name: 'Profile',
     template: 'profile',
+    authenticated: true,
     waitOn: function() {
         return Meteor.subscribe('user', this.params.username);
     },

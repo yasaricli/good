@@ -46,6 +46,10 @@
 
 <template name="loading">
     <div class="loading">
-        <img src="/loading.svg">
+        {{ > loadingSvg }}
     </div>
+</template>
+
+<template name="loadingSvg">
+    <img src="/loading.svg">
 </template>

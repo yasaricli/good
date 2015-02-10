@@ -1,0 +1,1 @@
+Template.editPhoto.rendered = function() {};

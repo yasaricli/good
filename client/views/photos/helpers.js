@@ -3,3 +3,5 @@ Template.photos.helpers({
         return Users.findOne(this.userId);
     }
 });
+
+Template.editPhoto.helpers({});
