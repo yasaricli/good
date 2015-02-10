@@ -31,15 +31,15 @@ Meteor.publishComposite('photos', function(fileerId) {
 
             // Users
             {
-                find: function() {
-                    return Users.find({ _id: this.userId });
+                find: function(photo) {
+                    return Users.find({ _id: photo.userId });
                 },
 
                 // User avatar
                 children: [
                     {
-                        find: function() {
-                            return Avatars.find({ userId: this._id });
+                        find: function(user, photo) {
+                            return Avatars.find({ userId: user._id });
                         }
                     }
                 ]
