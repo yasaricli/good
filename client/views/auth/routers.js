@@ -1,13 +1,15 @@
 Router.route('/login', {
     name: 'Login',
     template: 'login',
-    layoutTemplate: 'authLayout'
+    layoutTemplate: 'authLayout',
+    redirectLoggedInUsers: true
 });
 
 Router.route('/register', {
     name: 'Register',
     template: 'register',
-    layoutTemplate: 'authLayout'
+    layoutTemplate: 'authLayout',
+    redirectLoggedInUsers: true
 });
 
 Router.route('/profile/:username', {

@@ -3,10 +3,19 @@ Router.configure({
     loadingTemplate: 'loading',
     onBeforeAction: function() {
         var options = this.route.options,
-            authenticate = options['authenticated'];
+            authenticate = options['authenticated'],
+            redirectLoggedInUsers = options['redirectLoggedInUsers'];
 
         // defaults
         Lightbox.close();
+
+        if (redirectLoggedInUsers && Meteor.user()) {
+            // redirect login page
+            this.redirect('Photos');
+
+            // next false.
+            return;
+        }
 
         // authenticated
         if (authenticate && !Meteor.user()) {
@@ -26,5 +35,6 @@ Router.configure({
 Router.route('/', {
     name: 'Home',
     template: 'home',
-    layoutTemplate: 'authLayout'
+    layoutTemplate: 'authLayout',
+    redirectLoggedInUsers: true
 });
