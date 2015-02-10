@@ -16,7 +16,7 @@ input, textarea, button { outline:none; border:0px; }
 #Header, #Footer { width:100%; position:fixed; }
 #Header { height:50px; background-color:#2b5b7f; top:0px; }
 #Footer { height:60px; background-color:#24292c; bottom:0px; }
-#Surface { margin:55px 0 60px 0; }
+#Surface { margin:50px 0 60px 0; }
 
 #Footer li { float:left; width:33%; }
 #Footer li a { text-align:center; color:#a4a9ac; display:block; font-size:27px; padding:21px; border-bottom:5px solid #24292c; padding-bottom: 7px; }
@@ -55,4 +55,12 @@ input, textarea, button { outline:none; border:0px; }
 #Lightbox .close:hover { background-color:rgba(255, 255, 255, 0.96); }
 #Lightbox .warning { }
 #Lightbox .success {}
+
+#Profile { padding:10px; border-bottom: 1px solid #d9d9d9; background-color:#eee; }
+#Profile .profile-user { }
+#Profile .profile-user .avatar { float:left; cursor:pointer; width:100px; height:100px; }
+#Profile .profile-user .bio { color: #333; font-weight: bold; font-size: 20px; display:block; margin:15px 0 0 115px; position:absolute; }
+#Profile .profile-user .bio p { font-size: 13px; line-height: 17px; font-weight: normal; margin-top: 10px; color:#666; padding-right:10px; }
+#Profile .profile-user .avatar img { border-radius:50%; }
+
 .loading { text-align:center; padding:50px; }

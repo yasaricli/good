@@ -4,7 +4,7 @@
             <li>
                 <div class="user clearfix">
                     <div class="avatar">
-                        <img src="http://www.gravatar.com/avatar/f7e086bc0f602eb334f82d68dd21c0cf?default=404&size=200">
+                        <img src="{{ user.avatar }}">
                     </div>
                     <a href="{{ pathFor route='Profile' username=user.username }}" class="username">{{ user.username }}</a>
                 </div>

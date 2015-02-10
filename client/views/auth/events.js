@@ -17,3 +17,21 @@ Template.login.events({
         event.preventDefault();
     }
 });
+
+Template.profile.events({
+    'click .avatar': function(event) {
+        var options = {
+            quality: 100,
+            destinationType: navigator.camera.DestinationType.FILE_URI,
+            sourceType: navigator.camera.PictureSourceType.PHOTOLIBRARY
+        };
+
+        MeteorCamera.getPicture(options, function(error, data) {
+            var newFile = new FS.File(data);
+            if (data) {
+                Avatars.insert(newFile);
+            }
+        });
+        event.preventDefault();
+    }
+});

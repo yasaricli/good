@@ -23,5 +23,15 @@
 <template name="register"></template>
 
 <template name="profile">
-    {{ profile.username }}
+    <div id="Profile">
+        <div class="profile-user clearfix">
+            <div class="avatar">
+                <img src="{{ profile.avatar }}">
+            </div>
+            <span class="bio">
+                {{ profile.username }}
+                <p>I am Yasar icli, a software engineer living in Istanbul/Turkey. I work for @Markafoni platform.</p>
+            </span>
+        </div>
+    </div>
 </template>
