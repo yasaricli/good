@@ -5,6 +5,12 @@ var TemplateHelpers = {
     isActiveRoute: function(template) {
         var currentRoute = Router.current();
         return currentRoute && template === currentRoute.lookupTemplate() ? 'active' : '';
+    },
+    toUpperCase: function(text) {
+        return text.toUpperCase();
+    },
+    toFirstUpperCase: function(text) {
+        return text.toUpperCase()[0];
     }
 };
 

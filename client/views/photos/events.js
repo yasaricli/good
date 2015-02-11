@@ -1,8 +1,7 @@
 Template.editPhoto.events({
     'click .share': function(event, t) {
-        var photo = PhotoEdit.photo();
+        var photo = t.find('.filter').src;
         if (photo) {
-            photo.desc = t.find('#desc').value;
             Photos.insert(photo, function() {
                 PhotoEdit.close();
             });

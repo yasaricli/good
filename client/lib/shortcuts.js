@@ -20,7 +20,6 @@ root.SessionGetBase = function(sessionKey, extendObj) {
     });
 };
 
-
 root.Lightbox = new SessionGetBase('lightbox', {
     open: function(type, message) {
         Session.set(this.sessionKey, {
@@ -36,13 +35,8 @@ root.Lightbox = new SessionGetBase('lightbox', {
 root.PhotoEdit = new SessionGetBase('photoEdit', {
     open: function(photo) {
         Session.set(this.sessionKey, {
-            data: photo
+            data: photo,
+            filter: 'Nashville' // $.filterMe.filters
         });
-    },
-    photo: function(obj) {
-        var get = this.get();
-        if (get) {
-            return (new FS.File(get.data));
-        }
     }
 });

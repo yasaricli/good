@@ -47,7 +47,7 @@
         base.process = function() {
 
             // Check for canvas support before continuing
-            if ( !base.canvas.getContext ) 
+            if ( !base.canvas.getContext )
                 return;
 
             // Let's go!

@@ -40,12 +40,13 @@
             </div>
             <div class="edit-photo-content">
                 <div class="edit-photo-img">
-                    <img src="{{ photo.data }}" class="photo">
-                </div>
-                <div class="edit-photo-desc">
-                    <textarea id="desc" placeholder="Photo Desc"></textarea>
+                    {{ > filterPhoto src=photo.data filter=photo.filter }}
                 </div>
             </div>
         </div>
     {{/if}}
+</template>
+
+<template name="filterPhoto">
+    <img src="{{ src }}" class="photo filter" data-filter="{{ filter }}">
 </template>
