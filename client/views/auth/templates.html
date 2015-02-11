@@ -1,23 +1,23 @@
 <template name="login">
-    <form id="LoginForm">
-        <div class="formline">
-            <input type="text" id="username" placeholder="Username or Email">
-        </div>
-        <div class="formline">
-            <input type="password" id="password" placeholder="Password">
-        </div>
-        <div class="formline">
-            {{# if loggingIn }}
-                {{ > loading }}
-            {{ else }}
+    {{# if loggingIn }}
+        {{ > loading }}
+    {{ else }}
+        <form id="LoginForm">
+            <div class="formline">
+                <input type="text" id="username" placeholder="Username or Email">
+            </div>
+            <div class="formline">
+                <input type="password" id="password" placeholder="Password">
+            </div>
+            <div class="formline">
                 <button>LOGIN</button>
-            {{/ if }}
-            <span>
-                Don't have an account?
-                <a href="{{ pathFor route='Register' }}">Sign Up</a>
-            </span>
-        </div>
-    </form>
+                <span>
+                    Don't have an account?
+                    <a href="{{ pathFor route='Register' }}">Sign Up</a>
+                </span>
+            </div>
+        </form>
+    {{/if}}
 </template>
 
 <template name="register"></template>
