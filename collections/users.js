@@ -6,7 +6,7 @@ Users.helpers({
     },
     avatar: function() {
         var avatar = Avatars.findOne({ userId: this._id }, { sort: { uploadedAt: -1 } });
-        return avatar ? avatar.url() : '/avatar.png';
+        return avatar ? avatar.url() : '/img/avatar.png';
     }
 });
 
