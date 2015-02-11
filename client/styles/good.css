@@ -64,3 +64,16 @@ input, textarea, button { outline:none; border:0px; }
 #Profile .profile-user .avatar img { width:100%; border-radius:50%; }
 
 .loading { text-align:center; padding:50px; }
+
+
+#EditPhoto { position:fixed; top:0px; width:100%; height:100%; z-index:15; }
+.edit-photo-header { height:50px; background-color:#24292c; }
+.edit-photo-header a { color:white; text-align:center; font-size: 30px; width: 70px; height: 50px; display:block; line-height:50px; }
+.edit-photo-header a.share { font-weight:normal; background-color:#2b5b7f; float:right; }
+.edit-photo-header a.share:hover { background-color:#244B69; }
+.edit-photo-content { background-color:white; height:100%; }
+.edit-photo-header a.close { float:left; background-color:#181C1D; }
+.edit-photo-header a.close:hover { float:left; background-color:#0D1010; }
+
+.edit-photo-img img { width:100%; }
+.edit-photo-desc textarea { width:100%; border-bottom: 1px solid #ccc; font-size: 15px; resize:none; padding:25px 20px 12px 20px; color:#3C505C; }

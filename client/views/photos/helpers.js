@@ -7,4 +7,8 @@ Template.photos.helpers({
     }
 });
 
-Template.editPhoto.helpers({});
+Template.editPhoto.helpers({
+    photo: function() {
+        return PhotoEdit.get();
+    }
+});
