@@ -12,7 +12,17 @@
                     <div class="time">
                         <i class="fa fa-clock-o"></i> {{ livestamp uploadedAt }}
                     </div>
-                    <img src="{{ url }}" class="photo" data-filter="Nashville">
+                    <img src="{{ url }}" class="photo">
+                    <div class="likes clearfix">
+                        {{# if likes.count }}
+                            <div class="like-count">
+                                <i class="fa fa-heart"></i> <b>{{ likes.count }}</b> likes
+                            </div>
+                        {{/if}}
+                        <div class="like {{#if liked }}liked{{/if}}">
+                            <i class="fa fa-heart-o"></i>
+                        </div>
+                    </div>
                 </li>
             {{/if}}
         {{ else }}

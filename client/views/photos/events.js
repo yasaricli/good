@@ -1,3 +1,16 @@
+Template.photos.events({
+    'click .like': function(event, t) {
+        var filter = { photoId: this._id, userId: Meteor.userId() },
+            liked = Likes.findOne(filter);
+        if (liked) {
+            Likes.remove(liked._id);
+        } else {
+            Likes.insert(filter);
+        }
+        event.preventDefault();
+    },
+});
+
 Template.editPhoto.events({
     'click .share': function(event, t) {
         var photo = new FS.File(t.find('.filter').src);

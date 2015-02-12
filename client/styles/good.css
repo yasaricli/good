@@ -33,13 +33,18 @@ input, textarea, button { outline:none; border:0px; }
 .user .username { margin-left:10px; line-height:40px; }
 
 #Photos { }
-#Photos li {}
+#Photos li { border-bottom: 1px solid #ddd; }
 #Photos li.empty { color:#a4a9ac; text-align:center; padding:20px; }
 #Photos li.empty .fa-meh-o { font-size:100px; }
 #Photos li .time { float:right; color:#a4a5a7; margin:21px; font-size:13px; }
 #Photos li .time .fa-clock-o { font-size:16px; }
-
 #Photos li .photo { width:100%; }
+#Photos li .likes { padding:10px; }
+#Photos li .likes .like-count { padding-left: 5px; font-size: 13px; color: #1E4869; padding-bottom: 12px; }
+#Photos li .likes .like { float:left; font-size:25px; color:#BBB; cursor:pointer; }
+#Photos li .likes .like:hover { color:rgb(192, 34, 34); }
+#Photos li .likes .liked .fa-heart-o:before { content: "\f004"; color:rgb(192, 34, 34); }
+
 
 .formline { position:relative; }
 .formline input { margin-bottom:10px; }

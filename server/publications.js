@@ -43,6 +43,13 @@ Meteor.publishComposite('photos', function(fileerId) {
                         }
                     }
                 ]
+            },
+
+            // Likes
+            {
+                find: function(photo) {
+                    return Likes.find({ photoId: photo._id });
+                }
             }
         ]
 

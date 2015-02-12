@@ -4,6 +4,12 @@ Template.photos.helpers({
     },
     user: function() {
         return Users.findOne(this.userId);
+    },
+    liked: function() {
+        return Likes.findOne({ userId: Meteor.userId(), photoId: this._id });
+    },
+    likes: function() {
+        return Likes.find({ photoId: this._id });
     }
 });
 
