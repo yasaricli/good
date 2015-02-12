@@ -25,12 +25,12 @@
 <template name="profile">
     <div id="Profile">
         <div class="profile-user clearfix">
-            <div class="avatar">
+            <div class="avatar {{ you profile._id }}">
                 <img src="{{ profile.avatar }}">
             </div>
             <span class="bio">
                 {{ profile.username }}
-                <p>I am Yasar icli, a software engineer living in Istanbul/Turkey. I work for @Markafoni platform.</p>
+                <p>{{ profile.profile.bio }}</p>
             </span>
         </div>
     </div>

@@ -9,8 +9,14 @@ var TemplateHelpers = {
     toUpperCase: function(text) {
         return text.toUpperCase();
     },
-    toFirstUpperCase: function(text) {
-        return text.toUpperCase()[0];
+    toLowerCase: function(text) {
+        return text.toLowerCase();
+    },
+    you: function(userId) {
+        var user = Meteor.user();
+        if (user) {
+            return user._id == userId ? 'you' : '';
+        }
     }
 };
 

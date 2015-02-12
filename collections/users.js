@@ -11,4 +11,10 @@ Users.helpers({
 });
 
 // HOOKS
-Users.before.insert(function(userId, doc) { });
+Users.before.insert(function(userId, doc) {
+
+    // Defaults
+    if (_.has('profile', doc)) {
+        doc.profile.bio = "Hello I'm good user.";
+    }
+});

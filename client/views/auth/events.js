@@ -19,7 +19,7 @@ Template.login.events({
 });
 
 Template.profile.events({
-    'click .avatar': function(event) {
+    'click .you.avatar': function(event) {
         var options = {
             quality: 100,
             destinationType: navigator.camera.DestinationType.FILE_URI,
