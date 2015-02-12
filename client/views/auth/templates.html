@@ -24,14 +24,21 @@
 
 <template name="profile">
     <div id="Profile">
-        <div class="profile-user clearfix">
-            <div class="avatar {{ you profile._id }}">
-                <img src="{{ profile.avatar }}">
+        {{# if profile }}
+            <div class="profile-user clearfix">
+                <div class="avatar {{ you profile._id }}">
+                    <img src="{{ profile.avatar }}">
+                </div>
+                <span class="bio">
+                    {{ profile.username }}
+                    <p>{{ profile.profile.bio }}</p>
+                </span>
             </div>
-            <span class="bio">
-                {{ profile.username }}
-                <p>{{ profile.profile.bio }}</p>
-            </span>
-        </div>
+        {{ else }}
+            <div class="notFound">
+                <b>Profile Unavailable</b>
+                Sorry, this profile is not available at the moment. Please try again shortly.
+            </div>
+        {{/if}}
     </div>
 </template>

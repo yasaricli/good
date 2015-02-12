@@ -13,6 +13,9 @@ input, textarea, button { outline:none; border:0px; }
 
 .w34 { width:34%!important; }
 
+.notFound { padding:10px; color:rgba(34, 34, 34, 0.68); text-align:center; font-size:14px; }
+.notFound b { display:block; font-size:20px; margin-bottom:10px; }
+
 #Header, #Footer { width:100%; position:fixed; }
 #Header { height:50px; background-color:#2b5b7f; top:0px; }
 #Footer { height:60px; background-color:#24292c; bottom:0px; }
