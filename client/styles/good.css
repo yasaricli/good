@@ -41,10 +41,9 @@ input, textarea, button { outline:none; border:0px; }
 #Photos li .photo { width:100%; }
 #Photos li .likes { padding:10px; }
 #Photos li .likes .like-count { padding-left: 5px; font-size: 13px; color: #1E4869; padding-bottom: 12px; }
-#Photos li .likes .like { float:left; font-size:25px; color:#BBB; cursor:pointer; }
-#Photos li .likes .like:hover { color:rgb(192, 34, 34); }
-#Photos li .likes .liked .fa-heart-o:before { content: "\f004"; color:rgb(192, 34, 34); }
 
+#Photos li .likes .like { float:left; font-size:25px; color:#BBB; cursor:pointer; outline:none; }
+#Photos li .likes .liked .fa-heart-o:before { content: "\f004"; color:rgb(192, 34, 34); outline:none; }
 
 .formline { position:relative; }
 .formline input { margin-bottom:10px; }
