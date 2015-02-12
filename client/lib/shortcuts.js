@@ -34,6 +34,10 @@ root.Lightbox = new SessionGetBase('lightbox', {
 
 root.PhotoEdit = new SessionGetBase('photoEdit', {
     open: function(photo) {
+
+        // start Current Location
+        Geolocation.currentLocation();
+
         Session.set(this.sessionKey, {
             data: photo,
             filter: 'Nashville' // $.filterMe.filters
