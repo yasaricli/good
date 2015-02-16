@@ -1,0 +1,23 @@
+{
+  "servers": [
+    {
+      "host": "good.yasaricli.com",
+      "username": "root",
+      "password": ""
+    }
+  ],
+
+  "setupMongo": true,
+  "setupNode": true,
+  "nodeVersion": "0.10.33",
+  "setupPhantom": true,
+  "appName": "good",
+  "app": ".",
+
+  "env": {
+    "PORT": "3002",
+    "ROOT_URL": "http://good.yasaricli.com"
+  },
+
+  "deployCheckWaitTime": 15
+}
