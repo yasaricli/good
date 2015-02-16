@@ -1,28 +1,32 @@
 <template name="photos">
     <ul id="Photos">
-        {{# each photos }}
+        {{# each photos userId }}
             {{# if this.isUploaded }}
-                <li>
-                    <div class="user clearfix">
-                        <div class="avatar">
-                            <img src="{{ user.avatar }}">
+                <li class="{{# if ../userPage }}border0{{/if}}">
+                    {{# unless ../userId }}
+                        <div class="user clearfix">
+                            <div class="avatar">
+                                <img src="{{ user.avatar }}">
+                            </div>
+                            <a href="{{ pathFor route='Profile' username=user.username }}" class="username">{{ user.username }}</a>
                         </div>
-                        <a href="{{ pathFor route='Profile' username=user.username }}" class="username">{{ user.username }}</a>
-                    </div>
-                    <div class="time">
+                    {{/unless}}
+                    <div class="time clearfix {{# if ../userId }}userPageTime{{/if}}">
                         <i class="fa fa-clock-o"></i> {{ livestamp uploadedAt }}
                     </div>
                     <img src="{{ url }}" class="photo">
-                    <div class="likes clearfix">
-                        {{# if likes.count }}
-                            <div class="like-count">
-                                <i class="fa fa-heart"></i> <b>{{ likes.count }}</b> likes
+                    {{# unless ../userId }}
+                        <div class="likes clearfix">
+                            {{# if likes.count }}
+                                <div class="like-count">
+                                    <i class="fa fa-heart"></i> <b>{{ likes.count }}</b> likes
+                                </div>
+                            {{/if}}
+                            <div class="like {{#if liked }}liked{{/if}}">
+                                <i class="fa fa-heart-o"></i>
                             </div>
-                        {{/if}}
-                        <div class="like {{#if liked }}liked{{/if}}">
-                            <i class="fa fa-heart-o"></i>
                         </div>
-                    </div>
+                    {{/unless}}
                 </li>
             {{/if}}
         {{ else }}

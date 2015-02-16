@@ -17,6 +17,9 @@ var TemplateHelpers = {
         if (user) {
             return user._id == userId ? 'you' : '';
         }
+    },
+    is: function(a, b) {
+        return a == b;
     }
 };
 

@@ -25,15 +25,18 @@
 <template name="profile">
     <div id="Profile">
         {{# if profile }}
-            <div class="profile-user clearfix">
-                <div class="avatar {{ you profile._id }}">
-                    <img src="{{ profile.avatar }}">
+            <div class="profile-base">
+                <div class="profile-user clearfix">
+                    <div class="avatar {{ you profile._id }}">
+                        <img src="{{ profile.avatar }}">
+                    </div>
+                    <span class="bio">
+                        {{ profile.username }}
+                        <p>{{ profile.profile.bio }}</p>
+                    </span>
                 </div>
-                <span class="bio">
-                    {{ profile.username }}
-                    <p>{{ profile.profile.bio }}</p>
-                </span>
             </div>
+            {{ > photos userId=profile._id }}
         {{ else }}
             <div class="notFound">
                 <b>Profile Unavailable</b>

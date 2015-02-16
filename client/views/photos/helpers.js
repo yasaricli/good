@@ -1,6 +1,7 @@
 Template.photos.helpers({
-    photos: function() {
-        return Photos.find({}, { sort: { uploadedAt: -1 }});
+    photos: function(userId) {
+        var filter = userId ? { userId: userId } : {};
+        return Photos.find(filter, { sort: { uploadedAt: -1 }});
     },
     user: function() {
         return Users.findOne(this.userId);
